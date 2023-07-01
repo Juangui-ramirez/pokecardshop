@@ -5,3 +5,31 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     list-style: none;
   }
+
+  section{
+    align-content: cente;
+  }
+
+  .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    margin: 5% auto;
+  }
+
+  .pokeCard{
+    background-color: #dee5ed;
+    padding: 4%;
+    border: none;
+    border-radius: 10px;
+    margin: 5% 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .imgPoke{
+    background-color: white;
+    border-radius: 4px;
+  }
