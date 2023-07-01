@@ -9,6 +9,10 @@ const getpokemon = async () => {
             const respons = await fetch(pokemon.url);
             const dataPokemon = await respons.json();
 
+            const [type1,type2]= dataPokemon.types.map(
+                (typePokemon) => typePokemon.type.name
+              );
+
             const container = document.querySelector('.container');
             
             let pokeCard = document.createElement('div');
@@ -28,6 +32,9 @@ const getpokemon = async () => {
             `
 
                 container.appendChild(pokeCard);
+
+                pokeCard.setAttribute("type1", type1);
+                pokeCard.setAttribute("type2", type2);
         });
     } catch (error){
         alert("Error en la url");
@@ -35,3 +42,27 @@ const getpokemon = async () => {
 }
 
 getpokemon();
+
+const filter = document.querySelectorAll('.type');
+
+filter.forEach((filterType) => {
+    filterType.addEventListener("click", (event) => {
+      event.preventDefault();
+      const type = filterType.textContent.toLowerCase();
+      filterByType(type);
+    });
+  });
+  
+  const filterByType = (type) => {
+    const cards = document.querySelectorAll(".pokeCard");
+    cards.forEach((card) => {
+      const cardType1 = card.getAttribute("type1");
+      const cardType2 = card.getAttribute("type2");
+  
+      if (type === "all" || cardType1 === type || cardType2 === type) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  };
