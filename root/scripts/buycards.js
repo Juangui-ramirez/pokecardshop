@@ -4,7 +4,7 @@ const getpokemon = async () => {
     try {
         const res = await fetch(url);
         const data = await res.json();
-        
+
         data.results.forEach(async(pokemon) => {
             const respons = await fetch(pokemon.url);
             const dataPokemon = await respons.json();
@@ -16,7 +16,7 @@ const getpokemon = async () => {
             pokeCard.innerHTML = `
                 <div class = "headerCard">
                     <p>${dataPokemon.name}</p>
-                    <i>
+                    <i class = "fa-sharp fa-regular fa-heart">
                 </div>
 
                 <img class = "imgPoke" src = "${dataPokemon.sprites.other["home"].front_default}">
