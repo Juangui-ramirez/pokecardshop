@@ -1,42 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/buycards.css" />
+    <link rel="stylesheet" href="./styles/darkmode.css">
+    <link rel="icon" href="./assets/IconTab.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,800;1,200&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./styles/buycards.css">
-    <title>Pokecardshop</title>
-</head>
-<body>
-    <main>
-        <section>
-          <ul class="navFilter">
-            <li class ="type"><a href="#">All</a></li>
-            <li class ="type"><a href="#">Poison</a></li>
-            <li class ="type"><a href="#">Fire</a></li>
-            <li class ="type"><a href="#">Water</a></li>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Pokemon Cards</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.png" alt="Logo pokemon" />
+      <div>
+        <nav>
+          <ul class="list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Buy Cards</a></li>
+            <li><a href="./ourblog.html">Our Blog</a></li>
           </ul>
-            <div class="container"></div>
+        </nav>
+        <button class="btnDark">Dark Mode</button>
+      </div>
+    </header>
 
-            <div class="more-cards">
-              <button class="btnMore">Show more cards</button>
-              <p class="cardsCount"></p>
-            </div>
-        </section>
+    <main>
+      <section>
+        <div class="info">
+          <h1>Checkout Out Pokemon Cards</h1>
+          <p>
+            The Pokemon Go expansion for the Pokemon Trading Card Game will
+            release soon.
+          </p>
+        </div>
+
+        <ul class="nav">
+          <li class="navType"><a href="#" class="link">All</a></li>
+        </ul>
+
+        <div class="container"></div>
+
+        <div class="more-cards">
+          <button class="btnMore" background = "red" >Show more cards</button>
+          <p class="cardsCount"></p>
+        </div>
+      </section>
     </main>
 
+    <footer>
+      <div class="redes">
+        <img src="./assets/logo.png" alt="Logo Pokemon" class="logo-footer" />
+        <p>
+          Our vision is to provide convenience and help increase your sales
+          business.
+        </p>
+        <div class="icon">
+          <a
+            href="https://www.facebook.com/PokemonOficialLatAm/"
+            target="_blank"
+            ><i class="fa-brands fa-facebook fa-2xl"></i
+          ></a>
+          <a href="https://twitter.com/PokemonLATAM" target="_blank"
+            ><i class="fa-brands fa-twitter fa-2xl"></i
+          ></a>
+          <a href="https://www.instagram.com/pokemonlatam/" target="_blank"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="links">
+        <ul>
+          About
+          <a href=""><li>How it works</li></a>
+          <a href=""><li>Featured</li></a>
+          <a href=""><li>Partnership</li></a>
+          <a href=""><li>Bussiness Relation</li></a>
+        </ul>
+        <ul>
+          Community
+          <a href=""><li>Events</li></a>
+          <a href=""><li>Blog</li></a>
+          <a href=""><li>Podcast</li></a>
+          <a href=""><li>Invite a friend</li></a>
+        </ul>
+        <ul>
+          Socials
+          <a href=""><li>Discord</li></a>
+          <a href=""><li>Instagram</li></a>
+          <a href=""><li>Twitter</li></a>
+          <a href=""><li>Facebook</li></a>
+        </ul>
+      </div>
+    </footer>
+
     <script src="./scripts/buycards.js"></script>
-</body>
+    <script src="./scripts/darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+  </body>
 </html>

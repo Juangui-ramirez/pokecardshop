@@ -1,0 +1,36 @@
+body.darkMode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.darkMode .headerCard {
+  color: black;
+}
+
+.darkMode .footerCard {
+  color: black;
+}
+
+.darkMode .info > h1,
+.darkMode .info > p,
+.darkMode a,
+.darkMode .titleBlog {
+  color: white;
+}
+
+.darkMode .navType:hover {
+    border-bottom: 2px solid #3700B3;
+  }
+
+.darkMode .link:active {
+  color: aqua;
+}
+
+.darkMode .navType > a.activeLink {
+  color: rgb(55, 244, 3);
+  font-weight: bold;
+}
+
+.darkMode .navType.activeLink {
+  border-bottom: 2px solid  rgb(152, 241, 8);
+}

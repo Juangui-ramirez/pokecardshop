@@ -1,59 +1,229 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    list-style: none;
-    text-decoration: none;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-  }
+header {
+  background-color: #306bb3;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .navFilter {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-  }
+header > img {
+  width: 50%;
+  max-width: 150px;
+  margin-left: 3%;
+}
 
-  .type {
-    color: #1a202c99;
-    margin: 2% 0px;
-    width: 100%;
-    padding-bottom: 1%;
-    margin-bottom: 1%;
-    border-bottom: 2px solid #90a3bf;
-    text-align: center;
-  }
+header > div {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-  .container {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(4,25%);
-    margin: 5% auto;
-  }
+.list {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
 
-  .pokeCard{
-    background-color: #dee5ed;
-    padding: 4%;
-    border: none;
-    border-radius: 10px;
-    margin: 5% 0;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+a {
+  color: white;
+  text-decoration: none;
+}
 
-  .imgPoke{
-    background-color: white;
-    border-radius: 4px;
-  }
+.btnDark {
+  background-color: white;
+  color: #306bb3;
+  border: none;
+  min-width: 82px;
+  min-height: 38px;
+  border-radius: 4px;
+}
 
-  .pokeCard.hidden {
-    display: none;
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 90px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 48px;
+  color: #486284;
+}
+
+.info p {
+  color: #1a202c;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  width: 90%;
+}
+
+.navType {
+  margin: 2% 0;
+  width: 100%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+  border-bottom: 2px solid #90a3bf;
+  text-align: center;
+}
+
+.navType a {
+  color: black;
+}
+
+.navType:hover {
+  font-weight: bold;
+  border-bottom: 2px solid #1a202c;
+}
+
+.navType > a.activeLink {
+  color: rgb(1, 1, 1);
+  font-weight: bold;
+}
+
+.navType.activeLink {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-left: 2%;
+}
+
+.pokeCard {
+  padding: 4%;
+  border-radius: 10px;
+  margin: 5% 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerCard,
+.footerCard {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  padding: 1% 5%;
+}
+
+.redHeart {
+  color: rgb(255, 0, 0);
+}
+
+.imgPoke {
+  /* background-color: #ffffff; */
+  padding: 8%;
+  border-radius: 4px;
+  margin: 5%;
+  transition: transform 1s ease;
+}
+
+.imgPoke.flipped {
+  transform: rotateY(360deg);
+}
+
+.btnCard {
+  color: white;
+  background-color: #306bb3;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  margin: 0;
+  width: 50px;
+  height: 30px;
+}
+
+.more-cards {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 520px;
+  padding: 50px;
+}
+
+.btnMore {
+  color: white;
+  background-color: #306bb3;
+  border: none;
+  border-radius: 4px;
+  width: 156px;
+  height: 44px;
+}
+
+.more-cards > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #306bb3;
+}
+
+footer {
+  display: flex;
+  background-color: #306bb3;
+  color: white;
+  padding: 30px;
+  align-items: center;
+}
+
+.redes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer img {
+  max-width: 150px;
+  max-height: 55px;
+}
+
+footer p {
+  width: 50%;
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.links li {
+  font-weight: 500;
+  font-size: 16px;
+}

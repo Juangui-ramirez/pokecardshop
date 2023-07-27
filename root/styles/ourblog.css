@@ -45,35 +45,28 @@ a {
   border-radius: 4px;
 }
 
-main {
-  display: flex;
-  padding: 80px 30px;
-  align-items: center;
+h1 {
+  font-weight: 500;
+  font-size: 48px;
+  color: #486284;
+}
+
+main div p {
+  font-size: 18px;
 }
 
 section {
-  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
 }
 
-main > img {
-  width: 50%;
-}
-
-section > article {
+.title {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 90%;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-section > article > div > a {
-  color: black;
-  padding: 30px;
-  font-weight: bold;
+  align-items: center;
+  padding: 50px 0px;
 }
 
 footer {
